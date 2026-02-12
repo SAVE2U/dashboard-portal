@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Business Dashboard Portal</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: #f4f6f9;
+}
+
+.header {
+    background: #1e3c72;
+    color: white;
+    padding: 20px;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+}
+
+.container {
+    display: flex;
+}
+
+.sidebar {
+    width: 250px;
+    background: white;
+    padding: 20px;
+    border-right: 1px solid #ddd;
+    height: 100vh;
+}
+
+.sidebar h3 {
+    margin-top: 0;
+}
+
+.file {
+    padding: 10px;
+    margin: 10px 0;
+    cursor: pointer;
+    border-radius: 6px;
+    transition: 0.3s;
+}
+
+.file:hover {
+    background: #e6ecff;
+}
+
+.content {
+    flex: 1;
+    padding: 20px;
+}
+
+iframe {
+    width: 100%;
+    height: 85vh;
+    border: none;
+    border-radius: 8px;
+    background: white;
+}
+</style>
+
+<script>
+function loadDashboard(link) {
+    document.getElementById("viewer").src = link;
+}
+</script>
+
+</head>
+
+<body>
+
+<div class="header">
+    Business Analytics Dashboard Portal
+</div>
+
+<div class="container">
+
+    <div class="sidebar">
+        <h3>📁 Dashboards</h3>
+
+        <div class="file" onclick="loadDashboard('YOUR_PUBLISH_LINK_1')">
+            📊 Sales Return – Jan 2026
+        </div>
+
+        <div class="file" onclick="loadDashboard('YOUR_PUBLISH_LINK_2')">
+            📊 Outlet & Product Analysis
+        </div>
+
+        <div class="file" onclick="loadDashboard('YOUR_PUBLISH_LINK_3')">
+            📊 Return Reason Analysis
+        </div>
+
+    </div>
+
+    <div class="content">
+        <iframe id="viewer" src=""></iframe>
+    </div>
+
+</div>
+
+</body>
+</html>
